@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex; 
+    justify-content: center;
+} 
+
+.card {
+    justify-content: space-evenly;
+    background-color:lightgray;
+    border-radius: 5px;
+    border: 2px solid gray;
+    box-shadow: 5px 5px 5px black;
+    width: 400px;
+    margin-top: 100px;
+}
+
+.cardheader {
+    align-self: flex-start;
+    padding-bottom: 50px;
+    background-color: lightcoral;
+    align-self: flex-start;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.cardbody {
+    margin-left: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.profilepic {
+    margin-top: 25px;
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+}
+#cardname {
+    padding-top: 30px; 
+    font-family: cursive;
+    color:darkolivegreen;
+    font-size: 20px;
+}
+
+.smallicon {
+    margin: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+#location {
+    padding: 10px;
+    font-size: 15px;
+    font-family: cursive;
+}
+
+.row{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.column{
+    margin-left: 10px;
+    display: flex;
+    flex-flow: column;
+}

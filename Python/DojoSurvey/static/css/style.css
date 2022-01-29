@@ -1,0 +1,47 @@
+body {
+    background-color: lavender;
+    width: 90%;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    text-align: center;
+    width: 50%;
+}
+
+h5 {
+    text-decoration: underline;
+}
+
+p h6 {
+    font-weight: bold;
+
+}
+
+#personalInfo {
+    width: 50%;
+}
+
+.resultsBox {
+    margin: 5%;
+}
+.mainForm {
+    margin: 5%;
+    color:darkslategray;
+    padding: 10px;
+    background-color: cornsilk;
+    border: 3px solid coral;
+    border-radius: 10px;
+}
+
+#weeks {
+    width: 50%;
+}
+
+.submit {
+    border-radius: 10px;
+    margin: 15px;
+}

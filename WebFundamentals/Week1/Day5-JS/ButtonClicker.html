@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ButtonClicker.css">
+    <link rel="stylesheet" href ="CSSLibrary.css">  
+    <title>Dojonary</title>
+</head>
+
+<body id="main">
+    <div class="navBar" id="navBarStyle">
+        <ul class="row">
+            <li><h1 id="siteName">Dojonary</h1></li>
+            <li><input id="searchBar" type="text" placeholder="Search..."></li>
+            <li><button onclick="this.innerText='Logout'" class="btn" id="loginBtn">Login</button></li>
+        </ul>
+    </div>
+
+    <div id = "col-L">
+        <div class="contentBox">
+            <div class="content centerText">
+                <ul class="col">
+                    <li><h1 class = "word">ninja</h1></li>
+                    <li id="wordType">noun</li>
+                    <li id="wordPlural row">Plural: <em>ninjas</em></li>
+                    <li><button id="likeBtn" onclick="alert('Ninja was liked!')">13 likes</button></li>
+                </ul>
+                <p class="row" id="wordDefinition">A practitioner skilled in the&nbsp<a href="#">Japanese</a>&nbspart of&nbsp<a href="#">Ninjitsu</a>.</p>
+            </div>
+        </div>
+
+        <div class="contentBox">
+            <div class="content centerText">
+                <ul class="col">
+                    <li><h1 class = "word">ninja</h1></li>
+                    <li id="wordType">noun</li>
+                    <li id="wordPlural row">Plural: <em>ninjas</em></li>
+                    <li><button id="likeBtn" onclick="alert('Ninja was liked!')">37 likes</button></li>
+                </ul>
+                <p class="row" id="wordDefinition">A&nbsp<a href="#">programmer</a>&nbspwho breaks down problems with&nbsp<a href="#">zen</a>-like focus.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="col-R">
+        <div class="contentBox">
+            <div class="content col startText">
+                <h1 id="wordPlural">Dojonary is defined by YOU</h1>
+                <button class="btn" id ="definitionBtn" onclick="this.remove()">Add Definition</button>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

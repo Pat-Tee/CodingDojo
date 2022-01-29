@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <title>The Great Number Game!</title>
+</head>
+<body class='d-flex align-items-center text-center'>
+    <h1>Guess what number I'm thinking of!</h1>
+    <h3>*between 1 and 100*</h3>
+    <form action='/check' method='post'>
+        <input type='number' min='1' max='100' name='guess' required>
+        <button type='submit'>Guess</button>
+    </form>
+
+
+    <!--I am not a fan of tall laddered if statements, although this seemed to be the most direct way
+        to do this assignment. I imagine it might be cleaner to put each piece of this
+        HTML in a dictionary as values, use my colorDiff to decide the keys, and then pass appropriate one
+        through the template renderer; saving a lot of textspace here and moving a lot of this logic back into
+        the python file.-->
+    <div class="answerBox">
+    {% if session['colorDiff'] == 200 %}
+        <h2>Make a guess!</h2>
+    {% elif session['colorDiff'] > 50 %}
+        <p class="redText">Your guess is way too high!</p>
+    {% elif session['colorDiff'] > 25 and session['colorDiff'] < 50 %}
+        <p class="orangeText">Your guess is too high!</p>
+    {% elif session['colorDiff'] > 10 and session['colorDiff'] < 25 %}
+        <p class="yellowText">Your guess is too high, but not too far off!</p>
+    {% elif session['colorDiff'] > 0 and session['colorDiff'] < 10 %}
+        <p class="yellow-greenText">Your guess is too high, but you're very close!</p>
+    {% elif session['colorDiff'] < -50 %}
+        <p class="redText">Your guess is way too low!</p>
+    {% elif session['colorDiff'] < -25 and session['colorDiff'] > -50 %}
+        <p class="orangeText">Your guess is too low!</p>
+    {% elif session['colorDiff'] < -10 and session['colorDiff'] > -25 %}
+        <p class="yellowText">Your guess is too low, but not too far off!</p>
+    {% elif session['colorDiff'] < 0 and session['colorDiff'] > -10 %}
+        <p class="yellow-greenText">Your guess is too low, but you're very close!</p>
+    {% else %}
+        <p class="greenText">You guessed correctly!</p>
+        <form action='/reset'>
+            <button class='btn-primary' action='/reset' type='submit'>Play again?</button>
+        </form>
+    {% endif %}
+    </div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <title>Counter</title>
+</head>
+<body class="bg-light text-center">
+        <h1 class='jumbotron-heading'>Counter</h1>
+        <p>The counter is currently at: {{session['count']}} since last reset.</p>
+        <p>This page has actually been viewed: {{session['views']}} times since last reset.</p>
+
+        <div id ='forms'>
+            <form action='/addx' method='post'>
+                <input type='number' name='numAdd' min='1' max='100' value='2'>
+                <button type='submit' name='add'>ADD</button>
+            </form>
+            <br>
+            <form action='/reset' method='post'>
+                <button class='btn-primary'type='submit' name='reset'>RESET</button>
+            </form>
+        </div>
+
+</body>
+</html>

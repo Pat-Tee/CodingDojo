@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <title>Profile</title>
+</head>
+<body id="main">
+
+    <div id="navbar"> <!--use UL and li-->
+
+        <div class="row" id="nav1">
+            <h1 id="title">Profile</h1>
+        
+            <a id="navlink" href="#">Home</a>        
+            <a id="navlink" href="#">My Profile</a>
+            <a id="navlink" href="#">Find Connections</a>
+        </div>
+
+        <div>
+                <a id="button" href="#">Button</a>
+        
+        </div>
+    </div>
+
+    <div id="col-L">
+            <!--BEGIN - HTML for UserCard------------------------------------->
+            <!-- <div class="card"> -->
+        <div class="contentBox">
+                <div class="cardheader">
+                    <img class="profilepic" src="icons/user-circle.png">
+                </div>
+                <div class="cardbody">
+                    <div class="row">
+                        <p id="cardname">Patrick Trussell</p>
+                    </div>
+                    <div class="row"><img src="icons/map-marker.png" class="smallicon"><p id="location">New Jersey</p></div>
+                    <div class="column">
+                        <p>HTML/CSS/Java</p>
+                        <p>Keepin' on keepin' on!</p>
+                    </div>
+                    <div class="row"><img src="icons/gear.png" class="smallicon">
+                        <a href="#">Edit Profile</a>
+                    </div>
+                </div>
+        </div>
+            <!-- END - HTML for UserCard-----------------------------------
+            ---- BEGIN - HTML for "Education" contentBox------------------>
+        <div class="contentBox">
+            <div class="headerBar">
+                <h2 class="headerText">Education</h2>
+            </div>
+                <div class="content contentText">
+                    <h3>Coding Dojo Full Stack Bootcamp</h3>
+                    <p style="color: grey; font-family: cursive;">June 21, to September 24</p><br>
+                    <p>Triple Black belt in HTML, CSS, and JavaScript!</p>
+                </div>
+        </div>
+    </div>
+            <!-- END - HTML for Education box----------------------------->
+            <!-- BEGIN HTML for Right Column-->
+    <div id="col-R">
+        <div class="contentBox">
+            <h3 class="headerBar"><p class="numIcon">2</p>Connection Requests</h3>
+            <div class="content">
+                    <div class="row"><img class="smallicon" src="icons/user-circle.png"><p>Todd E.</p>
+                        <img class="smallicon" src="icons/accept-circle.png">
+                        <img class="smallicon" src="icons/close-circle.png">
+                    </div>
+                    <div class="row""><img class="smallicon" src="icons/user-circle.png"><p>Phil K.</p>
+                        <img class="smallicon" src="icons/accept-circle.png">
+                        <img class="smallicon" src="icons/close-circle.png">
+                    </div>
+            </div>
+        </div>
+
+        <div class="contentBox">
+            <h3 class="headerBar"><p class="numIcon">500+</p>Your Connections</h3>
+            <div class="content">
+                    <div class="row"><img class="smallicon" src="icons/user-circle.png"><p>Adrien D.</p></div>
+                    <div class="row""><img class="smallicon" src="icons/user-circle.png"><p>Anne J.</p></div>
+                    <div class="row"><img class="smallicon" src="icons/user-circle.png"><p>Alayne T.</p></div>
+                    <div class="row""><img class="smallicon" src="icons/user-circle.png"><p>Arry Y.</p></div>
+            </div>
+            <a href="#" class="content">View More</a>
+        </div>
+    </div>
+
+</body>
+</html>

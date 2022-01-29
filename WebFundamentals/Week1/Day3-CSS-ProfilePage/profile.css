@@ -1,0 +1,199 @@
+/* The smol reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*-----------------------------------
+The following code block is for main body elements and nav bar
+-----------------------------------*/
+
+#main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+#navbar {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* position: fixed; */
+    top : 0px;
+    width: 100%;
+    height: 100px;
+    background-color: teal;
+    border: 2px solid darkgrey;
+
+}
+
+#title {
+    font-family: monospace;
+    font-size: 30px;
+    font-style: oblique;
+    color: coral;
+    background-color:grey;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0px 10px 0px 10px;
+    justify-self: flex-start;
+}
+
+#navlink {
+    font-size: 20px;
+    font-family: cursive;
+    color: blue;
+    background-color: coral;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0px 10px 0px 10px;
+}
+
+#button {
+    font-size: 25px;
+    font-family: cursive;
+    color: whitesmoke;
+    background-color: coral;
+    border-radius: 3px;
+    border: 1px solid white;
+    padding: 5px;  
+    /* margin: 0px 10px 0px 10px; */
+    justify-self: flex-end;
+}
+
+#col-L {
+    /* margin-top: 75px; */
+    width: 40%;
+}
+
+#col-R {
+    width: 30%;
+    /* margin-top: 75px; */
+}
+
+
+.headerBar {
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    /* height: 10%; */
+    /* padding-bottom: 5%; */
+    background-color: skyblue;
+    /* border: 1px solid black; */
+    border-radius: 5px 5px 0px 0px;
+}
+
+.headerText {
+    margin-left: 15px;
+}
+.contentBox {
+    /* margin: 5%; */
+    margin-top: 20px;
+    width: 100%;
+    background-color: darkgray;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.content {
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+    flex-flow: column;
+    padding:3px;
+    /* justify-content: center; */
+}
+
+.contentText {
+    margin: 5px 0px 5px 10px;
+    padding: 5px;
+}
+
+/*----------------------------------------
+Hereafter is the code from my UserCard assignment, which I am reusing and intergrating here
+----------------------------------------*/
+
+.card {
+    background-color:lightgray;
+    border-radius: 5px;
+    border: 2px solid gray;
+    box-shadow: 5px 5px 5px black;
+    width: 400px;
+}
+
+.cardheader {
+    /* align-self: flex-start; */
+    padding-bottom: 50px;
+    background-color: lightcoral;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.cardbody {
+    margin-left: 10px;
+    display: flex;
+    flex-flow: column;
+    /* justify-content: flex-start; */
+}
+
+.profilepic {
+    margin-top: 25px;
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
+
+#cardname {
+    padding-top: 30px; 
+    font-family: cursive;
+    color:darkolivegreen;
+    font-size: 20px;
+}
+
+.smallicon {
+    margin: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+#location {
+    padding: 10px;
+    font-size: 15px;
+    font-family: cursive;
+}
+
+.row{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.column{
+    margin-left: 10px;
+    display: flex;
+    flex-flow: column;
+}
+
+/* ---------------------------
+This is for special elements
+----------------------------*/
+
+.numIcon {
+    margin: 0px 5px 0px 5px;
+    display: flex;
+    height: 20px;
+    padding: 3px;
+    background-color: darkgrey;
+    border-radius: 50%;
+    font-family: monospace;
+    color: black;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}

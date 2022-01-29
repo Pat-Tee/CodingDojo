@@ -1,0 +1,11 @@
+USE users_schema;
+INSERT INTO users ( first_name, last_name, email ) VALUES ('Patrick', 'Star', 'patrick@bikinibottom');
+INSERT INTO users ( first_name, last_name, email ) VALUES ('Spongebob', 'Squarepants', 'spongebob@bikinibottom');
+INSERT INTO users ( first_name, last_name, email ) VALUES ('Squidward', 'Tentacles', 'squidward@bikinibottom');
+SELECT * FROM users;
+SELECT * FROM users WHERE email='patrick@bikinibottom';
+SELECT * FROM users ORDER BY id DESC LIMIT 1;
+UPDATE USERS SET last_name='Pancakes' WHERE id=3;
+DELETE FROM users WHERE id=2;
+SELECT * FROM users ORDER BY first_name ASC;
+SELECT * FROM users ORDER BY first_name DESC;

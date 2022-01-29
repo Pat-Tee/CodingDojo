@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first_flask</title>
+</head>
+<body>
+    <div class="container">
+        <h1>You look, you see!</h1>
+        {% for friend in all_friends %}
+            <div>{{ friend.first_name+' '+friend.last_name }} 
+                is the best
+                {{ friend.occupation}}
+            </div>
+        {% endfor %}
+    </div>
+
+    <h1>Add a Friend</h1>
+<form action="/create_friend" method="POST">
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname">
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname">
+    <label for="occ" >Occupation:</label>
+    <input type="text" name="occ">
+    <input type="submit" value="Add Friend">
+
+    <h1>Delete a Friend</h1>
+    <form action="/delete_friend" method="POST">
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname">
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname">
+        <label for="occ" >Occupation:</label>
+        <input type="text" name="occ">
+        <input type="submit" value="Delete Friend">
+
+</form> 
+</body>
+</html>

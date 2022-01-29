@@ -1,0 +1,7 @@
+SELECT * from TWEETS;
+INSERT INTO tweets (tweet, user_id, created_at, updated_at) VALUES ('HOLO!', 4, NOW(), NOW() );
+SELECT * from TWEETS;
+UPDATE tweets SET tweet = 'HOLO!!' WHERE tweet = 'HOLO!';
+SELECT * from TWEETS;
+DELETE FROM tweets WHERE tweet = 'HOLO!!';
+SELECT * from TWEETS;

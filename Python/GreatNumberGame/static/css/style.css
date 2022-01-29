@@ -1,0 +1,37 @@
+body {
+    background-color: darkgrey;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.answerBox {
+    margin: 20px;
+    padding: 10px;
+    border: 3px solid purple;
+    background-color: black;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.redText {
+    color: red;
+}
+
+.orangeText {
+    color: orange;
+}
+
+.yellowText {
+    color: yellow;
+}
+
+.yellow-greenText {
+    color: yellowgreen;
+}
+
+.greenText {
+    color: green;
+}

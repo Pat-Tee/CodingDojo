@@ -1,0 +1,27 @@
+USE dojos_and_ninjas_schema;
+INSERT INTO dojos ( name ) VALUES ('Coding Dojo');
+INSERT INTO dojos ( name ) VALUES ('CodeSmith');
+INSERT INTO dojos ( name ) VALUES ('Bleeker St. sewer');
+DELETE FROM dojos ORDER BY created_at ASC LIMIT 3;
+INSERT INTO dojos ( name ) VALUES ('Bleeker St. sewer'), ('Coding Dojo'), ('Codesmith');
+INSERT INTO ninjas ( first_name, last_name, age ) VALUES ('Leonardo', 'turtle', 15), ('Donatello', 'turtle', 15), ('Michaelangelo', 'turtle', 15);
+INSERT INTO ninjas ( first_name, last_name, age ) VALUES ('Jimmy', 'Beam', 100), ('Jack', 'Daniels', 101), ('Johnny', 'Walker', 102);
+INSERT INTO ninjas ( first_name, last_name, age ) VALUES ('Jimmy', 'Neutron', 10), ('Father', 'Winter', 10000), ('Miss', 'Understood', 17);
+UPDATE ninjas SET dojo_id=1 WHERE last_name='turtle';
+UPDATE ninjas SET dojo_id=2 WHERE age >= 100;
+UPDATE ninjas SET dojo_id=3 WHERE first_name='Jimmy';
+UPDATE ninjas SET dojo_id=3 WHERE first_name='Father'; 
+UPDATE ninjas SET dojo_id=3 WHERE first_name='Miss';
+SELECT * FROM ninjas WHERE dojo_id=1;
+SELECT * FROM ninjas WHERE dojo_id=2;
+SELECT * FROM ninjas WHERE dojo_id=3;
+
+SELECT * FROM ninjas JOIN dojos on ninjas.`dojo_id` = dojos.`id` ORDER BY dojos.`id` ASC LIMIT 3;
+SELECT * FROM ninjas JOIN dojos on ninjas.`dojo_id` = dojos.`id` ORDER BY dojos.`id` DESC LIMIT 3;
+
+set @MinID = (select min(dojos.`id`) from dojos);
+select * from ninjas where dojo_id = @MinID;
+set @MaxID = (select max(dojos.`id`) from dojos);
+select * from ninjas where dojo_id = @MaxID;
+
+SELECT * FROM ninjas ORDER BY id DESC LIMIT 1;

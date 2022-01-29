@@ -1,0 +1,13 @@
+#dojobox {
+    padding: 15px;
+    margin: 0 auto;
+    border: 5px solid rgb(48, 48, 48);
+}
+
+.text-color-blue {
+    color: rgb(0, 0, 128);
+}
+
+.text-color-coral {
+    color: coral
+}

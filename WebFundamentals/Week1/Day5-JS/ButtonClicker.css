@@ -1,0 +1,87 @@
+#title {
+    font-family: cursive;
+    color: black;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#siteName {
+    padding: 15px;
+    font-family:monospace;
+    font-size: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+#loginBtn {
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    border-radius: 2px;
+    box-shadow: 5px 5px 2px black;
+}
+
+#likeBtn {
+    background-color: yellow;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px black;
+    padding: 5px 15px 5px 15px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#navBarStyle {
+    background-color: lightgrey;
+}
+
+#searchBar {
+    width: 300px;
+    border-radius: 2px;
+    border: 2px solid black;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+}
+
+.word {
+    font-size: 40px;
+    font-family: monospace;
+    font-family: cursive;
+}
+
+#wordType {
+    font-style: italic;
+    font-size: 25px;
+    padding: 0px 10px 10px 10px;
+    font-family: cursive;
+}
+
+#wordPlural {
+    font-size: 20px;
+    padding: 0px 10px 10px 10px;
+    font-family: cursive;
+}
+
+#wordDefinition {
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+    /* padding: 10px; */
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#definitionBtn {
+    font-family: cursive;
+    background-color: seagreen;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px black;
+    width: 90%;
+}

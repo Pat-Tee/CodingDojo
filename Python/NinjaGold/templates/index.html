@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" ype="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Ninja Gold!</title>
+</head>
+<body>
+    <div id='main'>
+        <div class='row justify-content-between' id='statBar'>
+            <div class='row'>
+                <p>Your gold:</p>
+                <div class='goldBox'>{{ session['gold'] }}</div>
+            </div>
+            <form action='/reset' method='post'>
+                <button id = 'reset' class='btn btn-danger'>Reset</button>
+            </form>
+        </div>
+        <form id='roomsRow' class='d-flex' action='/process_money' method='post'>
+            <div id='farm' class='roomBox'>
+                <h3>Farm</h3>
+                <p>This can earn you from 10-20 gold.</p>
+                <button name= 'destination' value='farm' type='submit' class='goldBox'>Find gold!</button>
+            </div>
+            <div id='cave' class='roomBox'>
+                <h3>Cave</h3>
+                <p>This can earn you from 5-10 gold.</p>
+                <button name='destination' value='cave' type='submit' class='goldBox'>Find gold!</button>
+            </div>
+            <div id='house' class='roomBox'>
+                <h3>House</h3>
+                <p>This can earn you from 2-5 gold.</p>
+                <button name='destination' value='house' type='submit' class='goldBox'>Find gold!</button>
+            </div>
+            <div id='casino' class='roomBox'>
+                <h3>Casino</h3>
+                <p>This can earn you, or cost you, from 0-50 gold.</p>
+                <button name='destination' value='casino' type='submit' class='goldBox'>Find gold!</button>
+            </div>
+        </form>
+        <div id='historyBar'>
+            <p>History</p>
+            <p>-------</p>
+            {{ session['history']['message']|safe }}
+        </div>
+    </div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

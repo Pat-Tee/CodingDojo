@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Dojo Survey</title>
+</head>
+<body>
+<div class='d-flex justify-content-center align-items-center'>
+    <h1>Thank you for submitting!</h1>
+    <div class="resultsBox mainForm">
+    <p><h6>Name:</h6></span> {{session['user_first_name']}} {{session['user_last_name']}}</p>
+    <p><h6>Email:</h6> {{session['user_email']}}</p>
+    <p><h6>Favorite programming language:</h6> {{session['user_favoriteLanguage']}}</p>
+    <p><h6>Interests:</h6> {{session['user_interests']}}</p>
+    <p><h6>Active week:</h6> {{session['user_week']}}</p>
+    <p><h6>Comments:</h6> {{session['user_comments']}}</p>
+    <form  action="/"><button type="submit" class="btn-primary submit">Go back</button></form>
+</div>
+    
+</div>
+</body>
+</html>

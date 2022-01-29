@@ -1,0 +1,40 @@
+body {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+#c1 {
+    background-color:darkgrey;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+#c2 {
+    background-color:rgb(51, 25, 25);
+    padding: 10px;
+    margin: 10px;    
+    justify-content: space-evenly;
+}
+
+#c3 {
+    background-color:rgb(20, 136, 87);
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+img.octocat {
+    height: 200px;
+    width: 200px;
+}

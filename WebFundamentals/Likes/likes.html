@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Likes</title>
+    <link rel = "stylesheet" href  = "likes.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="navbar">Network</h1>
+        <h1 id="feed">Your Feed</h1>
+
+        <div id="splitColumns">
+
+            <div class="col-L">
+                <div class= "col cBox">
+                    <img src="img/user-circle.png" id="profile-img">
+                    <a href="#" class="text">Set an avatar</a>
+                    <h2 class = "text"></p>James Doe</h2>
+                </div>
+            </div>
+
+            <div class="col-R">
+
+                <div class="cBox">
+                    <p>Neil M.</p>
+                    <div class="iBox">
+                        <p id="neilm" class="likesCount">0</p>likes
+                        <button onclick="likeMore('#neilm')" class="likeBtn">Like</button>
+                    </div>
+                </div>
+
+                <div class="cBox">
+                    <p>Nichole K.</p>
+                    <div class="iBox">
+                        <p id="nicholek" class="likesCount">0</p>likes
+                        <button onclick="likeMore('#nicholek')" class="likeBtn">Like</button>
+                    </div>
+                </div>
+
+                <div class="cBox">
+                    <p>Jim R.</p>
+                    <div class="iBox">
+                        <p id="jimr" class="likesCount">0</p>likes
+                        <button onclick="likeMore('#jimr')" class="likeBtn">Like</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="likes.js"></script>
+</body>
+
+</html>

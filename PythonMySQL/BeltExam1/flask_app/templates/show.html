@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Paintings</title>
+</head>
+<body class='w-75 m-auto bg-dark text-light'>
+    <div id = "mynavbar" class="d-flex row justify-content-end">
+        <div class="d-flex row align-items-center">
+        <a class="ml-5" href='/paintings/new'>Add a painting</a>
+        <a class="ml-5" href='/paintings'>Dashboard</a>
+        <form class='ml-5 mt-3' action='/logout'>
+            <button type='submit' class='btn btn-primary'>Log out</button>
+        </form>
+        </div>
+    </div>
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+    {% for category, message in messages %}
+    <p class = "flashbox {{ category }}">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+<div class="w-50">
+
+<div>
+    <h2>{{ painting.title }}</h2>
+    <p>Created by {{ painting.artist.first_name }} {{ painting.artist.last_name }}</p>
+    <p>Description: {{ painting.description }}</p>
+    <p>Price: ${{ painting.price }}</p>
+</div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

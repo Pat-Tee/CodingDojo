@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="d-flex">
+        <h1>Please take the time to answer this survey!</h1>
+            <form class='mainForm' action='/process' method='post'>
+                <h5>Personal information:</h5>
+                <div class='d-flex flex-column' id='personalInfo'>
+                    <input type="text" name='first_name' placeholder="First name..." value= 'John' required>
+                    <input type="text" name='last_name' placeholder="Last name..." value='Doe' required>
+                    <input type="email" name="email" placeholder="E-mail address..." required>
+                </div>
+                <h5>Favorite programming language so far:</h5>
+                <div class='d-flex flex-column'>
+                    <li>
+                    <input type='radio' id = 'htmlcss' name='favoriteLanguage' value='HTML/CSS'>
+                    <label for='htmlcss'>HTML/CSS</label>    
+                    </li>
+                    <li>
+                    <input type='radio' id= 'javascript' name='favoriteLanguage' value='JavaScript'>
+                    <label for='javascript'>JavaScript</label></li>
+                    <li>
+                    <input type='radio' id = 'python' name='favoriteLanguage' value='Python'>
+                    <label for='python'>Python</label>
+                    </li>
+                </div>
+                <h5>Which are you interested in?</h5>
+                <div class='d-flex flex-column'>
+                    <div>
+                    <input type='checkbox' id = 'ai' name='interests' value='Artificial Intelligence/Machine Learning'>
+                    <label for='ai'>Artificial Intelligence/Machine Learning</label>
+                    </div>
+                    <div>
+                    <input type='checkbox' id= 'data' name='interests' value='Data Analysis'>
+                    <label for='data'>Data Analysis</label>
+                    </div>
+                    <div>
+                    <input type='checkbox' id = 'software' name='interests' value='Software Development'>
+                    <label for='software'>Software Development</label>
+                    </div>
+                </div>
+                <h5>Which week are you in?</h5>
+                <div class='d-flex flex-column' id='weeks'>
+                    <select name="week">
+                        <option value='1'>Week 1</option>
+                        <option value='2'>Week 2</option>
+                        <option value='3'>Week 3</option>
+                        <option value='4'>Week 4</option>
+                        <option value='5'>Week 5</option>
+                        <option value='6'>Week 6</option>
+                        <option value='7+'>Week 7+</option>
+                    </select>
+                </div>
+                <h5>Comments:</h5>
+                <div class='d-flex flex-column'>
+                    <textarea id = 'comments' name="comments"></textarea>
+                </div>
+                <button class='btn-primary submit' type='submit'>Submit</button>
+            </form>
+    </div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
